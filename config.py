@@ -34,7 +34,7 @@ mean_landmark = np.fromfile('mean_landmark.bin',np.float32).reshape(1,-1)
 loss_weight = 0.2
 
 # Training setting
-max_epoch=10
+max_epoch=20
 start_epoch = 0
 IterationNum = [0]
 test_iter = 0
@@ -65,7 +65,7 @@ class lr_class:
         self.base_lr = 0.001
         self.gamma = 0.1
         self.lr_policy = "multistep"
-        self.steps = [6,8,9] #[4800,5400,5800]
+        self.steps = [16,18,19] #[4800,5400,5800]
 
 momentum = 0.9
 weight_decay = 0.0005

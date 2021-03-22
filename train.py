@@ -33,10 +33,11 @@ if __name__ == '__main__':
                                      std=[0.5, 0.5, 0.5])
     train_dataset = ImageLabelBinFolder(
         root=trainRoot, proto=trainProto, binRoot=trainRoot, bin_len=102, sign_replace=False,
-        
+        transform=transforms.Compose([
+            transforms.Scale(resize_shape),
+            transforms.RandomCrop((crop_shape)),
+        ]),
         data_transform=data_transforms.Compose([
-            data_transforms.Scale(resize_shape),
-            data_transforms.RandomCrop((crop_shape)),
             data_transforms.ToTensor(),
             normalize,
         ]),
@@ -45,7 +46,9 @@ if __name__ == '__main__':
 
     test_dataset = ImageLabelBinFolder(
         root=testRoot, proto=testProto, binRoot=testRoot, bin_len=102, sign_replace=False,
-        
+        transform=transforms.Compose([
+            transforms.Scale((crop_shape)),
+        ]),
         data_transform=data_transforms.Compose([
             data_transforms.Scale((crop_shape)),
             data_transforms.ToTensor(),
