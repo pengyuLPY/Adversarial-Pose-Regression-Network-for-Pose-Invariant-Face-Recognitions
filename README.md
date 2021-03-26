@@ -2,8 +2,9 @@ Adversarial Pose Regression Network for Pose-Invariant Face Recognition
 ====
 
 
+This is a PyTorch implementation of "**Adversarial Pose Regression Network for Pose-Invariant Face Recognition**".
 
-
+![image](https://github.com/pengyuLPY/Adversarial-Pose-Regression-Network-for-Pose-Invariant-Face-Recognitions/blob/master/imgs/pipeline.png)
 
 
 ## Dependencies
@@ -11,12 +12,18 @@ Adversarial Pose Regression Network for Pose-Invariant Face Recognition
 * [PyTorch 1.6.0](http://pytorch.org/)
 
 
-## usage
-
-
+## Usage
 * set implementation details in: config.py
 * run: python train.py
 * extrace feature in: extract_feature.py
+
+## Performance Illustration
+
+![image](https://github.com/pengyuLPY/Adversarial-Pose-Regression-Network-for-Pose-Invariant-Face-Recognitions/blob/master/imgs/illustration.png)
+
+##Landmark Location
+
+![image](https://github.com/pengyuLPY/Adversarial-Pose-Regression-Network-for-Pose-Invariant-Face-Recognitions/blob/master/imgs/mean_face.png)
 
 
 ## Bibtex
