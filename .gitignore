@@ -3,3 +3,4 @@
 *__pycache__#
 *errorImage.txt
 *.idea*
+*.DS_Store*

@@ -148,7 +148,7 @@ class ImageLabelBinFolder(data.Dataset):
             self.bin = bin.copy()
             self.bin_len = bin_len
             if self.bin.shape[0] != self.bin_len:
-                print ('int imageloader.py bin.shape[0] != cur_imageLabelBin.bin_len',bin.shape[0],cur_imageLabelBin.bin_len)
+                print ('int imageloader.py bin.shape[0] != cur_imageLabelBin.bin_len',bin.shape[0],self.bin_len)
                 exit()
 
     def __init__(self, root, proto, binRoot, transform=None, data_transform=None, target_transform=None, replace_src='', replace_des='', bin_len=1, miss_default=None, sign_imglist=False,loader=default_loader,key_index=0,label_len=1, sign_replace=True, prev_img=-1):
